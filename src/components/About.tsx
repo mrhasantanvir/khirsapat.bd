@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
-import { History, ShieldCheck, Heart } from "lucide-react";
+import { Award } from "lucide-react";
 
 const About = () => {
   return (
