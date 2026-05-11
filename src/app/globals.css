@@ -1,0 +1,80 @@
+@import "tailwindcss";
+
+@theme inline {
+  --color-primary: #D4AF37; /* True Royal Gold */
+  --color-secondary: #0B3D2E; /* Deep Forest Emerald */
+  --color-accent: #1E5128;
+  --color-dark: #021109;
+  --color-cream: #FCF9F2;
+  
+  --font-outfit: var(--font-outfit);
+  --font-inter: var(--font-inter);
+  --font-playfair: var(--font-playfair);
+
+  --shadow-gold: 0 20px 50px -12px rgba(212, 175, 55, 0.25);
+  --shadow-emerald: 0 30px 60px -12px rgba(11, 61, 46, 0.15);
+}
+
+:root {
+  --background: #FCF9F2; /* Heritage Cream */
+  --foreground: #021109;
+  --primary-glow: radial-gradient(rgba(212, 175, 55, 0.4), rgba(212, 175, 55, 0));
+  --secondary-glow: radial-gradient(rgba(11, 61, 46, 0.4), rgba(11, 61, 46, 0));
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-inter), sans-serif;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+  letter-spacing: -0.01em;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-outfit), sans-serif;
+  letter-spacing: -0.04em;
+  font-weight: 900;
+}
+
+.font-royal {
+  font-family: var(--font-playfair), serif;
+}
+
+.glass-premium {
+  background: rgba(252, 249, 242, 0.7);
+  backdrop-filter: blur(25px) saturate(160%);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  box-shadow: 
+    0 4px 6px -1px rgba(0, 0, 0, 0.05),
+    0 10px 15px -3px rgba(0, 0, 0, 0.03);
+}
+
+.text-gradient {
+  background: linear-gradient(135deg, #0B3D2E 0%, #D4AF37 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+}
+
+/* Paper/Grainy Texture */
+.texture-overlay::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.04;
+  z-index: 9999;
+  pointer-events: none;
+  background-image: url("https://grainy-gradients.vercel.app/noise.svg");
+  filter: contrast(120%) brightness(100%);
+}
+
+.card-hover {
+  @apply transition-all duration-700 ease-[cubic-bezier(0.23,1,0.32,1)];
+}
+
+.card-hover:hover {
+  @apply -translate-y-2 shadow-gold;
+}
