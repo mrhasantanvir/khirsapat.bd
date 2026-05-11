@@ -15,91 +15,71 @@ const Recipe = () => {
   ];
 
   return (
-    <section id="recipe" className="py-40 bg-white overflow-hidden relative">
+    <section id="recipe" className="py-16 bg-cream">
       <div className="container mx-auto px-4 md:px-6">
-        <div className="flex flex-col lg:flex-row-reverse items-center gap-24">
+        <div className="flex flex-col lg:flex-row items-center gap-12">
           
           {/* Image Side */}
-          <div className="lg:w-1/2 relative">
+          <div className="lg:w-1/2">
             <motion.div
               initial={{ opacity: 0, scale: 0.95 }}
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.8 }}
-              className="relative z-10"
+              className="relative"
             >
-              <div className="rounded-[4rem] overflow-hidden shadow-2xl border-[12px] border-white green-shadow">
+              <div className="rounded-3xl overflow-hidden shadow-xl border-4 border-white">
                 <Image
                   src="/recipe.png"
                   alt="খিরসাপাত আমের আচার"
-                  width={800}
-                  height={1000}
-                  className="w-full h-auto"
+                  width={600}
+                  height={400}
+                  className="w-full object-cover aspect-video"
                 />
               </div>
-              
-              {/* Floating Badge */}
-              <motion.div 
-                animate={{ rotate: [12, 15, 12] }}
-                transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-                className="absolute top-10 -right-10 z-20 bg-primary p-8 rounded-[2.5rem] shadow-2xl transform rotate-12 hidden md:block"
-              >
-                <ChefHat size={40} className="text-dark mb-2" />
-                <span className="block text-3xl font-black text-dark italic leading-none">Original</span>
-                <span className="text-[10px] font-black uppercase text-dark/40 tracking-widest">Recipe 2026</span>
-              </motion.div>
             </motion.div>
-            
-            {/* Decorative Element */}
-            <div className="absolute -bottom-10 -left-10 w-full h-full bg-secondary/5 rounded-full blur-[120px] -z-10" />
           </div>
 
           {/* Content Side */}
-          <div className="lg:w-1/2">
+          <div className="lg:w-1/2 space-y-6">
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, x: 30 }}
+              whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.8 }}
             >
-              <div className="inline-flex items-center gap-3 text-secondary font-black text-sm uppercase tracking-[0.4em] mb-8">
-                <Utensils size={18} />
+              <div className="text-primary font-bold text-xs uppercase tracking-widest mb-4 flex items-center gap-2">
+                <ChefHat size={14} />
                 রেসিপি কর্ণার
               </div>
               
-              <h3 className="text-5xl md:text-8xl font-black text-dark mb-12 leading-[0.95]">
+              <h3 className="text-2xl md:text-3xl font-black text-secondary leading-tight mb-6">
                 খিরসাপাত আমের <br />
-                <span className="text-gradient">ঝুরি আচার</span>
+                <span className="text-primary">ঝুরি আচার</span>
               </h3>
 
-              <div className="flex flex-wrap gap-10 mb-16">
+              <div className="flex gap-8 mb-8">
                 {[
                   { icon: Clock, text: "৪৫ মিনিট", label: "সময়" },
-                  { icon: Users, text: "পরিবার", label: "পরিবেশন" },
                   { icon: Utensils, text: "সহজ", label: "ধাপ" }
                 ].map((item, i) => (
-                  <div key={i} className="flex items-center gap-4">
-                    <div className="w-12 h-12 rounded-2xl bg-secondary/5 flex items-center justify-center text-primary">
-                      <item.icon size={20} />
+                  <div key={i} className="flex items-center gap-3">
+                    <div className="w-8 h-8 rounded-lg bg-white flex items-center justify-center text-primary shadow-sm">
+                      <item.icon size={16} />
                     </div>
                     <div>
-                      <span className="block text-[10px] font-black uppercase tracking-widest text-secondary/30 mb-1">{item.label}</span>
-                      <span className="font-bold text-dark">{item.text}</span>
+                      <span className="block text-[8px] font-bold uppercase text-secondary/40 tracking-widest">{item.label}</span>
+                      <span className="text-xs font-bold text-secondary">{item.text}</span>
                     </div>
                   </div>
                 ))}
               </div>
 
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                 <div>
-                  <h4 className="text-xl font-black text-dark mb-8 flex items-center gap-3">
-                    <span className="w-2 h-2 bg-primary rounded-full shadow-[0_0_10px_#FFC107]" />
-                    উপকরণ
-                  </h4>
-                  <ul className="space-y-4">
+                  <h4 className="text-sm font-black text-secondary mb-4 uppercase tracking-wider">উপকরণ</h4>
+                  <ul className="space-y-2">
                     {ingredients.map((item, index) => (
-                      <li key={index} className="flex items-center gap-4 text-secondary/70 font-medium">
-                        <div className="w-1.5 h-1.5 bg-primary/30 rounded-full" />
+                      <li key={index} className="flex items-center gap-3 text-[12px] text-secondary/70 font-medium">
+                        <div className="w-1 h-1 bg-primary rounded-full" />
                         {item}
                       </li>
                     ))}
@@ -107,19 +87,16 @@ const Recipe = () => {
                 </div>
 
                 <div>
-                  <h4 className="text-xl font-black text-dark mb-8 flex items-center gap-3">
-                    <span className="w-2 h-2 bg-secondary rounded-full shadow-[0_0_10px_#1A4D2E]" />
-                    প্রস্তুত প্রণালী
-                  </h4>
-                  <div className="space-y-6">
+                  <h4 className="text-sm font-black text-secondary mb-4 uppercase tracking-wider">প্রস্তুত প্রণালী</h4>
+                  <div className="space-y-4">
                     {[
-                      "আমগুলো ধুয়ে খোসা ছাড়িয়ে ঝুরি করে কাটুন।",
-                      "তেলে পাঁচফোড়ন ও শুকনো লঙ্কা ফোঁড়ন দিন।",
-                      "আম, হলুদ, লবন ও চিনি দিয়ে রান্না করুন।"
+                      "আমগুলো ধুয়ে ঝুরি করে কাটুন।",
+                      "তেলে পাঁচফোড়ন ফোঁড়ন দিন।",
+                      "আম ও মশলা দিয়ে রান্না করুন।"
                     ].map((step, i) => (
-                      <div key={i} className="flex gap-4 items-start">
-                        <span className="flex-shrink-0 w-6 h-6 bg-secondary/10 text-secondary rounded-lg flex items-center justify-center text-xs font-black">{i + 1}</span>
-                        <p className="text-sm text-secondary/70 font-medium leading-relaxed">{step}</p>
+                      <div key={i} className="flex gap-3 items-start">
+                        <span className="flex-shrink-0 w-5 h-5 bg-secondary/10 text-secondary rounded-md flex items-center justify-center text-[10px] font-bold">{i + 1}</span>
+                        <p className="text-[12px] text-secondary/70 font-medium leading-relaxed">{step}</p>
                       </div>
                     ))}
                   </div>
