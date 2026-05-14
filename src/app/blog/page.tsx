@@ -52,12 +52,12 @@ const BlogPage = () => {
                 transition={{ duration: 0.6, delay: index * 0.05 }}
                 className="group relative bg-white rounded-[3rem] overflow-hidden border border-secondary/5 shadow-xl shadow-secondary/5 transition-all duration-700 hover:scale-[1.02] flex flex-col h-full"
               >
-                <div className="relative h-72 overflow-hidden bg-secondary/5">
+                <div className="relative h-64 overflow-hidden bg-secondary/5">
                   <Image 
                     src={post.image} 
                     alt={post.title} 
                     fill 
-                    className="object-contain transition-transform duration-1000 group-hover:scale-105 p-6"
+                    className="object-cover transition-transform duration-1000 group-hover:scale-105"
                   />
                   <div className="absolute inset-0 bg-secondary/10 group-hover:bg-secondary/0 transition-colors duration-700 pointer-events-none" />
                 </div>
