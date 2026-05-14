@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
-import { Globe, Mail, Phone, MapPin, Play, ArrowRight, ShoppingBag, Users, Leaf, ShieldCheck } from "lucide-react";
+import { Globe, Mail, Phone, MapPin, Play, ArrowRight, ShoppingBag, Users, Leaf, ShieldCheck, Smartphone } from "lucide-react";
 import { motion } from "framer-motion";
 
 const Footer = () => {
@@ -61,6 +61,7 @@ const Footer = () => {
               {[
                 { icon: Globe, href: "https://www.facebook.com/RajshahirAam", color: "hover:bg-[#1877F2]" },
                 { icon: Play, href: "https://www.youtube.com/@রাজশাহীরআম", color: "hover:bg-[#FF0000]" },
+                { icon: Smartphone, href: "https://play.google.com/store/apps/details?id=com.rabbil.rajshahimango", color: "hover:bg-secondary hover:text-primary" },
                 { icon: Phone, href: "tel:01707979767", color: "hover:bg-primary hover:text-secondary" }
               ].map((social, i) => (
                 <Link 
