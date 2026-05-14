@@ -34,7 +34,7 @@ const Footer = () => {
   }, []);
 
   return (
-    <footer className="bg-[#FDFDF5] text-dark pt-32 pb-12 relative overflow-hidden">
+    <footer className="bg-[#FDFDF5] text-dark pt-10 pb-8 relative overflow-hidden">
       {/* Decorative Curved Top */}
       <div className="absolute top-0 left-0 w-full overflow-hidden leading-[0] transform rotate-180">
         <svg className="relative block w-[calc(100%+1.3px)] h-[80px]" viewBox="0 0 1200 120" preserveAspectRatio="none">
@@ -43,21 +43,21 @@ const Footer = () => {
       </div>
 
       <div className="container mx-auto px-4 md:px-6 relative z-10">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-16 mb-24">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
           <div className="lg:col-span-1">
-            <Link href="/" className="flex items-center gap-3 mb-8 group">
-              <div className="w-12 h-12 bg-secondary rounded-2xl flex items-center justify-center text-primary shadow-xl">
-                <Leaf size={28} fill="currentColor" />
+            <Link href="/" className="flex items-center gap-3 mb-6 group">
+              <div className="w-10 h-10 bg-secondary rounded-xl flex items-center justify-center text-primary shadow-xl">
+                <Leaf size={24} fill="currentColor" />
               </div>
               <div className="flex flex-col leading-none">
-                <span className="text-2xl font-black tracking-tight text-dark">Khirsapat<span className="text-primary">.bd</span></span>
-                <span className="text-[10px] font-bold uppercase tracking-[0.3em] text-secondary/40">Premium Rajshahi</span>
+                <span className="text-xl font-black tracking-tight text-dark">Khirsapat<span className="text-primary">.bd</span></span>
+                <span className="text-[9px] font-bold uppercase tracking-[0.3em] text-secondary/40">Premium Rajshahi</span>
               </div>
             </Link>
-            <p className="text-secondary/60 mb-10 text-lg leading-relaxed font-medium">
+            <p className="text-secondary/60 mb-8 text-base leading-relaxed font-medium">
               রাজশাহীর আমের আভিজাত্য এখন আপনার ঘরে। সরাসরি বাগান থেকে বাছাই করা প্রিমিয়াম ফল।
             </p>
-            <div className="flex gap-4">
+            <div className="flex gap-3">
               {[
                 { icon: Globe, href: "https://www.facebook.com/RajshahirAam", color: "hover:bg-[#1877F2]" },
                 { icon: Play, href: "https://www.youtube.com/@রাজশাহীরআম", color: "hover:bg-[#FF0000]" },
@@ -66,20 +66,20 @@ const Footer = () => {
                 <Link 
                   key={i}
                   href={social.href}
-                  className={`w-12 h-12 bg-white rounded-2xl flex items-center justify-center transition-all border border-secondary/5 shadow-sm group/icon ${social.color}`}
+                  className={`w-10 h-10 bg-white rounded-xl flex items-center justify-center transition-all border border-secondary/5 shadow-sm group/icon ${social.color}`}
                 >
-                  <social.icon size={20} className="text-secondary/40 group-hover/icon:text-white transition-colors" />
+                  <social.icon size={18} className="text-secondary/40 group-hover/icon:text-white transition-colors" />
                 </Link>
               ))}
             </div>
           </div>
 
           <div>
-            <h4 className="text-xl font-black mb-8 text-dark flex items-center gap-3">
+            <h4 className="text-lg font-black mb-4 text-dark flex items-center gap-3">
               <span className="w-2 h-2 bg-primary rounded-full shadow-[0_0_10px_#FFC107]" />
               লিঙ্কস
             </h4>
-            <ul className="space-y-4">
+            <ul className="space-y-3">
               {[
                 { name: "হোম", href: "/" },
                 { name: "পরিচিতি", href: "/about" },
@@ -89,8 +89,8 @@ const Footer = () => {
                 { name: "যোগাযোগ", href: "/contact" }
               ].map((item) => (
                 <li key={item.name}>
-                  <Link href={item.href} className="text-secondary/50 hover:text-secondary transition-all font-bold flex items-center gap-3 group/link">
-                    <ArrowRight size={14} className="opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all" />
+                  <Link href={item.href} className="text-secondary/50 hover:text-secondary transition-all font-bold flex items-center gap-3 group/link text-sm">
+                    <ArrowRight size={12} className="opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all" />
                     {item.name}
                   </Link>
                 </li>
@@ -99,23 +99,23 @@ const Footer = () => {
           </div>
 
           <div>
-            <h4 className="text-xl font-black mb-8 text-dark flex items-center gap-3">
+            <h4 className="text-lg font-black mb-4 text-dark flex items-center gap-3">
               <span className="w-2 h-2 bg-secondary rounded-full shadow-[0_0_10px_#1A4D2E]" />
               যোগাযোগ
             </h4>
-            <div className="space-y-8">
+            <div className="space-y-6">
               {[
                 { icon: MapPin, text: "রাজশাহী, বাংলাদেশ।", label: "ঠিকানা" },
                 { icon: Phone, text: "০১৭০৭৯৭৯৭৬৭", label: "হটলাইন" },
                 { icon: Mail, text: "info@rajshahiram.com.bd", label: "ইমেইল" }
               ].map((contact, i) => (
-                <div key={i} className="flex gap-5 items-start">
-                  <div className="w-10 h-10 rounded-xl bg-secondary/5 flex items-center justify-center flex-shrink-0 border border-secondary/5 text-primary">
-                    <contact.icon size={18} />
+                <div key={i} className="flex gap-4 items-start">
+                  <div className="w-9 h-9 rounded-lg bg-secondary/5 flex items-center justify-center flex-shrink-0 border border-secondary/5 text-primary">
+                    <contact.icon size={16} />
                   </div>
                   <div>
-                    <span className="block text-[10px] font-black uppercase tracking-widest text-secondary/30 mb-1">{contact.label}</span>
-                    <span className="font-bold text-dark/80">{contact.text}</span>
+                    <span className="block text-[9px] font-black uppercase tracking-widest text-secondary/30 mb-0.5">{contact.label}</span>
+                    <span className="font-bold text-dark/80 text-sm">{contact.text}</span>
                   </div>
                 </div>
               ))}
@@ -123,17 +123,17 @@ const Footer = () => {
           </div>
 
           <div className="relative">
-            <div className="bg-white p-10 rounded-[3rem] border border-secondary/5 shadow-2xl shadow-secondary/5 relative overflow-hidden">
+            <div className="bg-white p-6 rounded-[2.5rem] border border-secondary/5 shadow-2xl shadow-secondary/5 relative overflow-hidden">
               <div className="absolute -top-10 -right-10 w-32 h-32 bg-primary/10 rounded-full blur-3xl" />
-              <ShieldCheck size={48} className="text-primary mb-6" />
-              <h4 className="text-2xl font-black text-dark mb-4">নিরাপদ অর্ডার</h4>
-              <p className="text-secondary/40 mb-8 leading-relaxed font-medium">
+              <ShieldCheck size={40} className="text-primary mb-4" />
+              <h4 className="text-xl font-black text-dark mb-3">নিরাপদ অর্ডার</h4>
+              <p className="text-secondary/40 mb-6 leading-relaxed font-medium text-xs">
                 সেরা স্বাদের খিরসাপাত আম এখন সরাসরি বাগান থেকে আপনার ঘরে।
               </p>
               <Link 
                 href="https://rajshahiram.com.bd/ProductDetails/m102" 
                 target="_blank"
-                className="bg-primary text-secondary px-10 py-5 rounded-2xl font-black text-xl hover:bg-white hover:text-secondary transition-all shadow-2xl shadow-primary/20 flex items-center justify-center gap-3 group"
+                className="bg-primary text-secondary px-8 py-4 rounded-2xl font-black text-lg hover:bg-white hover:text-secondary transition-all shadow-2xl shadow-primary/20 flex items-center justify-center gap-3 group"
               >
                 অর্ডার করুন
                 <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform" />
@@ -160,7 +160,7 @@ const Footer = () => {
           <div className="flex items-center gap-3 text-[10px] font-black uppercase tracking-[0.2em] text-secondary/30">
             <span>Powered by</span>
             <Link href="https://rajshahiram.com.bd/" className="bg-secondary/5 px-4 py-2 rounded-full border border-secondary/5 text-secondary/60 hover:text-primary transition-colors">
-              RajshahiRam
+              Rajshahir Aam
             </Link>
           </div>
         </div>

@@ -102,12 +102,12 @@ export default async function BlogPost({ params }: Props) {
             {/* Left Column: Content */}
             <div className="lg:w-2/3">
               <article className="bg-white rounded-[4rem] overflow-hidden shadow-2xl border border-secondary/5">
-                <div className="relative aspect-[21/9] w-full bg-secondary/5 p-12 md:p-24">
+                <div className="relative aspect-video w-full bg-secondary/5">
                   <Image 
                     src={post.image} 
                     alt={post.title} 
                     fill 
-                    className="object-contain transition-transform duration-1000"
+                    className="object-cover transition-transform duration-1000"
                   />
                 </div>
                 

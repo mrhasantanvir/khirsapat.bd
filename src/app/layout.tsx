@@ -18,16 +18,41 @@ const playfair = Playfair_Display({
 });
 
 export const metadata: Metadata = {
-  title: "Khirsapat.bd | রাজশাহীর প্রিমিয়াম খিরসাপাত আম (হিমসাগর)",
-  description: "রাজশাহীর বাগান থেকে সরাসরি বাছাই করা প্রিমিয়াম খিরসাপাত (হিমসাগর) আম। কোনো কেমিক্যাল ছাড়াই প্রাকৃতিকভাবে পাকানো সেরা স্বাদের নিশ্চয়তা।",
-  icons: {
-    icon: "/favicon.svg",
+  title: "Khirsapat.bd | রাজশাহীর সেরা প্রিমিয়াম খিরসাপাত আম (হিমসাগর)",
+  description: "রাজশাহীর বাগান থেকে সরাসরি বাছাই করা প্রিমিয়াম খিরসাপাত (হিমসাগর) আম। ১০০% বিশুদ্ধ এবং কেমিক্যালমুক্ত প্রাকৃতিক স্বাদের নিশ্চয়তা। এখনই অর্ডার করুন।",
+  metadataBase: new URL('https://khirsapat.bd'),
+  alternates: {
+    canonical: '/',
   },
-  keywords: ["Khirsapat Mango price in Bangladesh", "খিরসাপাত আমের বৈশিষ্ট্য", "রাজশাহীর আম", "খিরসাপাত আম চাষ পদ্ধতি", "হিমসাগর আম"],
+  icons: {
+    icon: [
+      { url: "/favicon.svg", type: "image/svg+xml" },
+      { url: "/logo_icon.png", type: "image/png", sizes: "32x32" },
+    ],
+    apple: "/logo_icon.png",
+  },
+  keywords: ["Khirsapat Mango", "খিরসাপাত আম", "রাজশাহীর আম", "হিমসাগর আম", "Premium Mango Bangladesh"],
   openGraph: {
     title: "খিরসাপাত আম - রাজশাহীর সেরা প্রিমিয়াম খিরসাপাত আম",
-    description: "রাজশাহীর বাগান থেকে সরাসরি সেরা মানের খিরসাপাত আম (হিমসাগর)।",
-    images: ["/khirsapat-mango.png"],
+    description: "রাজশাহীর বাগান থেকে সরাসরি সেরা মানের খিরসাপাত আম (হিমসাগর)। ১০০% বিশুদ্ধতা এবং স্বাদের নিশ্চয়তা।",
+    url: 'https://khirsapat.bd',
+    siteName: 'Khirsapat.bd',
+    images: [
+      {
+        url: "/khirsapat-mango.png",
+        width: 1200,
+        height: 630,
+        alt: "Premium Khirsapat Mango",
+      }
+    ],
+    locale: 'bn_BD',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Khirsapat.bd | রাজশাহীর প্রিমিয়াম খিরসাপাত আম',
+    description: 'রাজশাহীর বাগান থেকে সরাসরি বাছাই করা প্রিমিয়াম খিরসাপাত আম।',
+    images: ['/khirsapat-mango.png'],
   },
 };
 
@@ -117,23 +142,64 @@ export default function RootLayout({
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "Product",
-              "name": "খিরসাপাত আম (Khirsapat Mango)",
-              "image": "https://khirsapat.bd/khirsapat-mango.png",
-              "description": "রাজশাহীর বাগান থেকে সরাসরি সেরা মানের খিরসাপাত আম।",
-              "brand": {
-                "@type": "Brand",
-                "name": "Khirsapat.bd"
-              },
-              "offers": {
-                "@type": "Offer",
+            __html: JSON.stringify([
+              {
+                "@context": "https://schema.org",
+                "@type": "WebSite",
+                "name": "Khirsapat.bd",
+                "alternateName": ["রাজশাহীর আম", "Khirsapat Mango"],
                 "url": "https://khirsapat.bd",
-                "priceCurrency": "BDT",
-                "availability": "https://schema.org/InStock"
+                "potentialAction": {
+                  "@type": "SearchAction",
+                  "target": "https://khirsapat.bd/blog?q={search_term_string}",
+                  "query-input": "required name=search_term_string"
+                }
+              },
+              {
+                "@context": "https://schema.org",
+                "@type": "Organization",
+                "name": "Khirsapat.bd",
+                "url": "https://khirsapat.bd",
+                "logo": "https://khirsapat.bd/logo.png",
+                "sameAs": [
+                  "https://www.facebook.com/RajshahirAam",
+                  "https://rajshahiram.com.bd"
+                ],
+                "contactPoint": {
+                  "@type": "ContactPoint",
+                  "telephone": "+8801707979767",
+                  "contactType": "customer service",
+                  "areaServed": "BD",
+                  "availableLanguage": "Bengali"
+                }
+              },
+              {
+                "@context": "https://schema.org",
+                "@type": "SiteNavigationElement",
+                "hasPart": [
+                  {
+                    "@type": "WebPage",
+                    "name": "Home",
+                    "url": "https://khirsapat.bd/"
+                  },
+                  {
+                    "@type": "WebPage",
+                    "name": "Blog",
+                    "url": "https://khirsapat.bd/blog"
+                  },
+                  {
+                    "@type": "WebPage",
+                    "name": "About Us",
+                    "url": "https://khirsapat.bd/about"
+                  },
+                  {
+                    "@type": "WebPage",
+                    "name": "Buy Now",
+                    "url": "https://rajshahiram.com.bd/ProductDetails/m102"
+                  }
+                ]
               }
-            })
+            ])
           }}
         />
         {children}
