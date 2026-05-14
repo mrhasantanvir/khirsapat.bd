@@ -191,7 +191,7 @@ export default async function BlogPost({ params }: Props) {
                 <div className="space-y-6">
                   {[
                     { icon: Globe, label: "ওয়েবসাইট", val: "rajshahiram.com.bd", href: "https://rajshahiram.com.bd" },
-                    { icon: Smartphone, label: "মোবাইল অ্যাপ", val: "Play Store", href: "https://play.google.com/store/apps" },
+                    { icon: Smartphone, label: "মোবাইল অ্যাপ", val: "Play Store", href: "https://play.google.com/store/apps/details?id=com.rabbil.rajshahimango" },
                     { icon: MessageCircle, label: "হোয়াটসঅ্যাপ", val: "+8801707979767", href: "https://wa.me/8801707979767", color: "text-green-500" }
                   ].map((item, i) => (
                     <Link key={i} href={item.href} target="_blank" className="flex items-center gap-5 p-5 bg-secondary/5 rounded-2xl hover:bg-secondary hover:text-white transition-all group border border-secondary/5">
