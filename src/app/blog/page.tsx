@@ -34,7 +34,7 @@ const BlogPage = () => {
               নলেজ <span className="text-gradient italic">সেন্টার</span>
             </h1>
             <p className="text-xl md:text-2xl text-secondary/60 max-w-2xl font-medium leading-relaxed">
-              রাজশাহীর আমের ঐতিহ্য, স্বাদ এবং সঠিক যত্ন সম্পর্কে বিস্তারিত জানুন আমাদের গবেষণালব্ধ তথ্য ও টিপস থেকে।
+              রাজশাহীর আমের ঐতিহ্য, স্বাদ এবং সঠিক যত্ন সম্পর্কে বিস্তারিত জানুন। এছাড়া <strong>himsagor mango price</strong> এবং <strong>khrishapat mango price</strong> সম্পর্কে আপডেট থাকুন।
             </p>
           </div>
         </div>
@@ -52,7 +52,7 @@ const BlogPage = () => {
                 transition={{ duration: 0.6, delay: index * 0.05 }}
                 className="group relative bg-white rounded-[3rem] overflow-hidden border border-secondary/5 shadow-xl shadow-secondary/5 transition-all duration-700 hover:scale-[1.02] flex flex-col h-full"
               >
-                <div className="relative h-64 overflow-hidden bg-secondary/5">
+                <div className="relative aspect-video overflow-hidden bg-secondary/5">
                   <Image 
                     src={post.image} 
                     alt={post.title} 

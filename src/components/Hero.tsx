@@ -38,7 +38,7 @@ const Hero = () => {
             </h1>
             
             <p className="text-base text-secondary/70 max-w-md leading-relaxed font-medium">
-              রাজশাহীর বাগান থেকে বাছাই করা প্রিমিয়াম খিরসাপাত আম (হিমসাগর)। সম্পূর্ণ প্রাকৃতিক ও কেমিক্যাল মুক্ত।
+              রাজশাহীর বাগান থেকে বাছাই করা প্রিমিয়াম খিরসাপাত আম (হিমসাগর)। <strong>himsagor amer dam</strong> বা <strong>khirshapat amer dam</strong> যাই হোক না কেন, বাজারের সেরা দামে সম্পূর্ণ প্রাকৃতিক ও কেমিক্যাল মুক্ত আম নিশ্চিন্তে অর্ডার করুন।
             </p>
 
             <div className="flex items-center gap-6 pt-2">

@@ -31,7 +31,7 @@ export const metadata: Metadata = {
     ],
     apple: "/logo_icon.png",
   },
-  keywords: ["Khirsapat Mango", "খিরসাপাত আম", "রাজশাহীর আম", "হিমসাগর আম", "Premium Mango Bangladesh"],
+  keywords: ["Khirsapat Mango", "খিরসাপাত আম", "রাজশাহীর আম", "হিমসাগর আম", "Premium Mango Bangladesh", "himsagor mango price", "khrishapat mango price", "himsagor amer dam", "khirshapat amer dam"],
   openGraph: {
     title: "খিরসাপাত আম - রাজশাহীর সেরা প্রিমিয়াম খিরসাপাত আম",
     description: "রাজশাহীর বাগান থেকে সরাসরি সেরা মানের খিরসাপাত আম (হিমসাগর)। ১০০% বিশুদ্ধতা এবং স্বাদের নিশ্চয়তা।",
